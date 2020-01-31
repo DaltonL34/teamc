@@ -28,3 +28,14 @@ def doesRoomExist(roomNumber):
     except:
         print("You can't go there.")
         return False
+    
+def moveFunction(userInput, room):
+    if userInput == "n" and doesRoomExist() == True:
+        room = room - 1
+    if userInput == "s" and doesRoomExist() == True:
+        room = room + 1
+    if userInput == "e" and doesRoomExist() == True: 
+        room = room + 100
+    if userInput == "w" and doesRoomExist() == True:
+        room = room - 100
+    return room
